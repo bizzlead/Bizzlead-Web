@@ -1,0 +1,123 @@
+.features-strategies {
+  padding: 7rem 2rem;
+  background: var(--bg-white);
+  border-top: 1px solid var(--border-color);
+}
+
+.features-strategies-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.features-strategies-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.features-strategies-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+  letter-spacing: -0.5px;
+}
+
+.features-strategies-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  line-height: 1.9;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.features-strategies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+}
+
+.strategy-card-item {
+  background: var(--bg-section);
+  padding: 3.5rem 2.5rem;
+  border-radius: 20px;
+  border: 2px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.strategy-card-item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--gradient-primary);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 0;
+}
+
+.strategy-card-item:hover::after {
+  opacity: 0.03;
+}
+
+.strategy-card-item:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--primary-color);
+}
+
+.strategy-icon-large {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  transition: transform 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.strategy-card-item:hover .strategy-icon-large {
+  transform: scale(1.15) rotate(5deg);
+}
+
+.strategy-card-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+  letter-spacing: -0.3px;
+  position: relative;
+  z-index: 1;
+}
+
+.strategy-card-text {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  font-size: 1.05rem;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .features-strategies {
+    padding: 5rem 1.5rem;
+  }
+
+  .features-strategies-title {
+    font-size: 2rem;
+  }
+
+  .features-strategies-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .strategy-card-item {
+    padding: 2.5rem 2rem;
+  }
+}
+
